@@ -168,9 +168,6 @@ for (i in links_left_spin) {
   bowling_data_left_spin <- bind_rows(bowling_data_left_spin, table_data)
 }
 
-##### CODE CHECKED TO THIS POINT ######
-
-
 ### CLEAN
 
 # add left-arm and right-arm pace/spin labels, and tidy column names
