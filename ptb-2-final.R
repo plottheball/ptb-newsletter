@@ -158,7 +158,7 @@ player_mins_data_final <- rbind(squad_cl_19_by_player_reshaped, squad_cl_22_by_p
 # create custom palette
 ajax_palette <- c("#D2122E", "#E6DFDF", "#4C4D54")
 
-# create rough plot...
+# create rough plot
 rough_dumbbell <- ggplot(dumbbell_data_final, aes(x = Age_Final_Ajax, xend = Age_Final_Opp, y = Season)) + 
   geom_dumbbell(colour = ajax_palette[2],
                 size = 3,
