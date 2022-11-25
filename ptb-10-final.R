@@ -274,7 +274,7 @@ display_tbl
 
 # add formatting, headers and notes
 tbl_formatted <- display_tbl %>%
-  tab_header(title = html("<b>Alyssa Healy's T20 efficiency is unmatched</b>"),
+  tab_header(title = html("<b>Alyssa Healy's efficiency is unmatched</b>"),
              subtitle = html("Performance of current Australian batters in the WBBL since 2015<br><br><i style='font-size:90%'>Note: '+/-' measures runs scored per innings compared to expectation, which is calculated in each innings based on a batter's scoring rate relative to the scoring rate of other players in that game</i><br>")) %>%
   tab_source_note(source_note = html("Players with <1,700 balls faced in completed WBBL matches excluded<br><br>Data: ESPNCricinfo | Table: Plot the Ball")) %>%
   tab_stubhead(label = "Player") %>%
