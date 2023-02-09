@@ -4,9 +4,8 @@ library(janitor)
 library(RcppRoll)
 library(ggtext)
 
-ita_results <- read_sheet(ss = "https://docs.google.com/spreadsheets/d/1g7Yg8mDQ2Wm9zKOwblwK6fXx5j9z84QtZJuKxxR6acc/",
-                              sheet = "Tidy (1996-)") %>%
-  clean_names()
+# Results for all teams imported via Google Sheets from Wikipedia article series: 'Head-to-head records of Tier 1 rugby union national teams'
+# e.g. https://en.wikipedia.org/wiki/History_of_rugby_union_matches_between_Argentina_and_Australia
 
 ita_results_tidy <- ita_results %>%
   select(1:4, 11:12)
