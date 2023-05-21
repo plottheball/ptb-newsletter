@@ -5,7 +5,7 @@ library(RcppRoll)
 library(ggtext)
 library(scales)
 
-# Results for all teams imported via Google Sheets from https://www.leinsterrugby.ie/fixtures-and-results/combined-results/
+# Results imported via Google Sheets from https://www.leinsterrugby.ie/fixtures-and-results/combined-results/
 leinster_results <- read_sheet(leinster_sheets) %>%
   clean_names()
 
