@@ -6,7 +6,7 @@ library(scales)
 library(ggtext)
 library(ggborderline)
 
-# Results imported via Google Sheets from ### https://www.world.rugby/sevens-series/standings/womens
+# Results imported via Google Sheets from https://www.world.rugby/sevens-series/standings/womens
 results_url <- "https://docs.google.com/spreadsheets/d/1fWSaK0ChpL5ZpGrcuEoGOnj1XFye3nUUobhPufXgpRE/edit?usp=sharing"
 
 results_data <- read_sheet(results_url) %>%
