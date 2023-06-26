@@ -7,8 +7,6 @@ library(ggtext)
 
 ohtani_fg_id <- 19755
 
-###
-
 batter_2018 <- fg_batter_game_logs(ohtani_fg_id, year = 2018) %>%
   arrange(Date)
 batter_2019 <- fg_batter_game_logs(ohtani_fg_id, year = 2019) %>%
