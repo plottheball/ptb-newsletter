@@ -121,10 +121,12 @@ peak_freqpoly <- ggplot(analysis_filtered, aes(peak_age, after_stat(density), co
   scale_y_continuous(limits = c(0, 0.21),
                      breaks = seq(0,0.2,0.05),
                      expand = c(0,0),
-                     labels = label_percent(accuracy = 1L)) +
+                     labels = NULL) +
   scale_color_manual(values = custom_palette, aesthetics = c("colour", "fill")) +
   theme(legend.position = "none",
-        axis.title.x = element_blank())
+        axis.title.x = element_blank(),
+        axis.line.y = element_blank(),
+        axis.ticks.y = element_blank())
 peak_freqpoly
 
 # add custom theme to plot
@@ -135,7 +137,7 @@ themed_freqpoly
 # add labelling to plot
 labelled_freqpoly <- themed_freqpoly +
   labs(title = "Players peak earlier on the <span style='color:#490C99;'>WTA Tour</span>",
-       subtitle = "Proportion of current <b style='color:#A4CCDB;'>ATP</b> and <b style='color:#490C99;'>WTA</b> players who reached<br>their peak Tennis Abstract Elo rating at each age",
+       subtitle = "Distribution of current <b style='color:#A4CCDB;'>ATP</b> and <b style='color:#490C99;'>WTA</b> players who reached<br>their peak Tennis Abstract Elo rating at each age",
        caption = "<i>excluding players currently within 12 months of their peak</i><br><br>Data: Tennis Abstract | Chart: Plot the Ball")
 labelled_freqpoly
 
