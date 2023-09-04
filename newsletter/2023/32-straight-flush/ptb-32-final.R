@@ -9,6 +9,9 @@ tour_seasons <- seq(2023, 2023, 1)
 
 expected_wins_all <- tibble()
 
+# season performance CSVs downloaded from following link:
+# https://datagolf.com/performance-table
+
 for (i in tour_seasons) {
   expected_wins_import <- read_csv(paste0("dg_performance_", i, ".csv"), show_col_types = FALSE)
   expected_wins_import <- expected_wins_import %>%
