@@ -77,11 +77,12 @@ rookies_u20 <- all_rookies %>%
   filter(rookie_age < 20) %>%
   select(-13, -14) %>%
   mutate(time_share = toi_gp /  ms("60:00"),
-         points_p60 = p / time_share / 100,
+         ppg = p / gp,
+         points_p60 = p / gp / time_share,
          .after = p)
 
 rookies_final <- rookies_u20 %>%
-  select(1, 11, 12, 13, 15) %>%
+  select(1, 11, 12, 13, 14) %>%
   mutate(time_for_plot = minute(toi_gp) + (second(toi_gp) / 60))
 
 crosby_focus <- "#FCB514"
@@ -94,8 +95,8 @@ rookies_scatter <- ggplot(rookies_final, aes(x = time_for_plot, y = points_p60))
                                TRUE ~ 0.4),
              size = 4) +
   scale_y_continuous(name = NULL,
-                     limits = c(0, 3.4),
-                     breaks = seq(0, 3, 0.5),
+                     limits = c(0, 4.4),
+                     breaks = seq(0, 4, 1),
                      expand = c(0,0)) +
   scale_x_continuous(name = NULL,
                      limits = c(0, 24),
@@ -104,7 +105,7 @@ rookies_scatter <- ggplot(rookies_final, aes(x = time_for_plot, y = points_p60))
   theme(legend.position = "none") +
   annotate(geom = "text",
            x = 0.4,
-           y = 3.375,
+           y = 4.25,
            label = "Points per\n60 mins",
            family = ptb_font,
            colour = ptb_dark_grey,
@@ -113,7 +114,7 @@ rookies_scatter <- ggplot(rookies_final, aes(x = time_for_plot, y = points_p60))
            vjust = 1) +
   annotate(geom = "text",
            x = 23,
-           y = 0.475,
+           y = 0.65,
            label = "Minutes\nper game",
            family = ptb_font,
            colour = ptb_dark_grey,
