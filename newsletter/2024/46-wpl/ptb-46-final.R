@@ -297,4 +297,3 @@ labelled_scatter_2 <- themed_scatter_2 +
        subtitle = "<b>Runs scored per ball</b> in the <b>WBBL</b> and <b>WPL</b> by<br>batters who played in both competitions in 2023",
        caption = "<i>Batters with <60 balls faced in either competition excluded</i><br><br>Data: ESPNCricinfo | Chart: Plot the Ball")
 labelled_scatter_2
-
