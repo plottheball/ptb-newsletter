@@ -394,7 +394,7 @@ team_summary <- team_summary %>%
   mutate(total_inns = rhb + lhb,
          lhb_share = lhb / total_inns * 100,
          rhb_share = rhb / total_inns * 100) %>%
-  filter(total_inns > 600) %>%
+  filter(total_inns > 500) %>%
   arrange(desc(rhb_share))
 
 team_final <- team_summary %>%
@@ -407,8 +407,8 @@ team_final <- team_summary %>%
                               handedness == "rhb_share" & batter_team != "IND" ~ "Right Other",
                               TRUE ~ "!"))
 
-team_labels <- tibble(label = c("IND", "NZ",  "PAK", "WI",  "SA",  "SL",  "ENG", "AUS"),
-                      full = c("India", "New Zealand",  "Pakistan", "West Indies",  "South Africa",  "Sri Lanka",  "England", "Australia"))
+team_labels <- tibble(label = c("IND", "NZ",  "PAK", "BAN", "WI",  "SA",  "SL",  "ENG", "AUS"),
+                      full = c("India", "New Zealand",  "Pakistan", "Bangladesh", "West Indies",  "South Africa",  "Sri Lanka",  "England", "Australia"))
 
 team_final <- left_join(team_final, team_labels, by = c("batter_team" = "label"))
 
