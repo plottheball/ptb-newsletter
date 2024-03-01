@@ -414,7 +414,7 @@ team_final <- left_join(team_final, team_labels, by = c("batter_team" = "label")
 
 rough_bars <- ggplot(team_final, aes(x = fct_reorder(full, share_final), y = share_final, fill = category)) +
   geom_bar(stat = "identity",
-           width = 0.5) +
+           width = 0.55) +
   scale_fill_manual(values = c("#E67545", "#E6C5B8", "#1275B3", "#A3BCCC")) +
   geom_hline(yintercept = 0) +
   scale_y_continuous(limits = c(-100, 100),
