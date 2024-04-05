@@ -160,20 +160,20 @@ forwards_filtered_5v5 <- forwards_summary_5v5 %>%
   filter(tot_mins >= 300)
 
 forwards_final <- forwards_filtered_5v5 %>%
-  mutate(oz_entries_per_60 = tot_zone_entries / tot_mins * 60,
-         dz_exits_per_60 = tot_exits_w_poss / tot_mins * 60)
+  mutate(oz_controlled_entries_per_60 = tot_carries / tot_mins * 60,
+         dz_successful_exits_per_60 = tot_exits_w_poss / tot_mins * 60)
 
 background_colour_ii <- "#2c2c2c"
 
-progression_scatter <- ggplot(forwards_final, aes(x = dz_exits_per_60, y = oz_entries_per_60)) +
+progression_scatter <- ggplot(forwards_final, aes(x = dz_successful_exits_per_60, y = oz_controlled_entries_per_60)) +
   geom_point(color = case_when(forwards_final$number == 98 ~ bedard_focus,
                                TRUE ~ background_colour_ii),
              alpha = case_when(forwards_final$number == 98 ~ 1,
                                TRUE ~ 0.2),
              size = 4) +
   scale_y_continuous(name = NULL,
-                     limits = c(8, 32),
-                     breaks = seq(10, 30, 5),
+                     limits = c(2, 21),
+                     breaks = seq(0, 20, 5),
                      expand = c(0,0)) +
   scale_x_continuous(name = NULL,
                      limits = c(2, 14),
@@ -182,8 +182,8 @@ progression_scatter <- ggplot(forwards_final, aes(x = dz_exits_per_60, y = oz_en
   theme(legend.position = "none") +
   annotate(geom = "text",
            x = 2.5,
-           y = 31.5,
-           label = "Successful\nOZ Entries\nper 60 mins",
+           y = 20.5,
+           label = "Controlled\nOZ Entries\nper 60 mins",
            family = ptb_font,
            colour = ptb_dark_grey,
            fontface = "bold",
@@ -191,7 +191,7 @@ progression_scatter <- ggplot(forwards_final, aes(x = dz_exits_per_60, y = oz_en
            vjust = 1) +
   annotate(geom = "text",
            x = 13.5,
-           y = 13.5,
+           y = 6.5,
            label = "Successful\nDZ Exits\nper 60 mins",
            family = ptb_font,
            colour = ptb_dark_grey,
