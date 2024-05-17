@@ -226,7 +226,7 @@ themed_scatter <- rough_scatter +
 themed_scatter
 
 labelled_scatter <- themed_scatter +
-  labs(title = "<b style='color:#CD6035'>Alcaraz</b> wins long points on his serve<br>more often than the 'Big Three' did",
+  labs(title = "<b style='color:#CD6035'>Alcaraz</b> wins long points on his serve<br>more often than the 'Big Three'",
        subtitle = "Performance of <b style='color:#CD6035'>Carlos Alcaraz</b> over a sample of<br>service points lasting at least 7 shots, compared to<br>each of the <b>'Big Three'</b>",
        caption = "Data: Tennis Abstract | Chart: Plot the Ball")
 labelled_scatter
