@@ -37,7 +37,7 @@ themed_scatter <- rough_scatter +
   annotate(geom = "text",
            x = 0.875,
            y = 0.03,
-           label = "% of\npoints",
+           label = "Win %",
            family = ptb_font,
            colour = ptb_dark_grey,
            fontface = "bold",
@@ -46,7 +46,7 @@ themed_scatter <- rough_scatter +
   annotate(geom = "text",
            x = 0.03,
            y = 0.725,
-           label = "Win %",
+           label = "% of\npoints",
            family = ptb_font,
            colour = ptb_dark_grey,
            fontface = "bold",
@@ -59,7 +59,6 @@ labelled_scatter <- themed_scatter +
        subtitle = "<b>Win %</b> of men's international rugby teams vs. Tier<br>1 opponents between 2020 and 2023, compared to<br>the <b>share of points</b> they scored in those fixtures",
        caption = "<i>'Tier 1 opponents' includes the British & Irish Lions</i><br><br>Data: Plot the Ball | Chart: Plot the Ball")
 labelled_scatter
-
 
 ### DATA DOWNLOADED FROM ALL.RUGBY AND IMPORTED FROM GOOGLE SHEETS:
 starters_table <- read_sheet(ss = "https://docs.google.com/spreadsheets/d/1fr5TYljpiJYs8abVnyo-2bhBabgfn73BVLF3yO-jUZ0/",
