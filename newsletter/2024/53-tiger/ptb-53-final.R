@@ -5,7 +5,7 @@ library(ggtext)
 library(janitor)
 library(googlesheets4)
 
-# season CSVs downloaded from following link:https://datagolf.com/performance-table
+# season CSVs downloaded from following link: https://datagolf.com/performance-table
 tour_seasons <- seq(1996, 2024, 1)
 
 expected_wins_all <- tibble()
