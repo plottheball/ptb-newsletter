@@ -56,7 +56,7 @@ pt_final <- bind_rows(playing_time_historic, playing_time_current) %>%
   select(-season)
 
 pt_filtered <- pt_final %>%
-  filter(season_start_year > 2002 & season_start_year)
+  filter(season_start_year > 2002)
 
 pt_summary_age <- pt_filtered %>%
   group_by(squad, age_final) %>%
