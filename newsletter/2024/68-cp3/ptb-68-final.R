@@ -102,7 +102,7 @@ themed_area
 
 labelled_area <- themed_area +
   labs(title = "Both <b style='color:#E67391'>old</b> and <b style='color:#40807C'>young</b> players now play<br>more than they did in the late 2000s",
-       subtitle = "% of NBA regular-season minutes played by players<br><b style='color:#E67391'>older than 33</b> and <b style='color:#40807C'>younger than 22</b> since 2005-06",
+       subtitle = "% of NBA regular-season minutes played by players<br><b style='color:#E67391'>older than 33</b> and <b style='color:#40807C'>younger than 21</b> since 2005-06",
        caption = "Data: Basketball Reference | Chart: Plot the Ball")
 labelled_area
 
@@ -166,6 +166,6 @@ themed_beeswarm
 
 labelled_beeswarm <- themed_beeswarm +
   labs(title = "The NBA's current crop of <b style='color:#E67391'>veterans</b><br>still contributes at an all-star level",
-       subtitle = "Distribution of <b>BPM</b> ratings of regular NBA players<br><b style='color:#E67391'>older than 33</b> and <b style='color:#40807C'>younger than 22</b> since 2005-06",
+       subtitle = "Distribution of <b>BPM</b> ratings of regular NBA players<br><b style='color:#E67391'>older than 33</b> and <b style='color:#40807C'>younger than 21</b> since 2005-06",
        caption = "<i>Players with <1,000 total minutes played or <25 MPG excluded</i><br><br>Data: Basketball Reference | Chart: Plot the Ball")
 labelled_beeswarm
