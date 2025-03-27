@@ -52,12 +52,6 @@ recent_data <- forwards_final %>%
   arrange(desc(combined_entries_exits)) %>%
   relocate(dz_successful_exits_per_60, .after = "tot_mins")
 
-#### NB SINCE 2023-24
-### WORDING FROM BEDARD SCATTER
-
-### 'DZ EXIT' = ...
-### 'OZ ENTRY' = ...
-
 display_tbl <- recent_data %>%
   gt(rowname_col = "player",
      groupname_col = NA) %>%
