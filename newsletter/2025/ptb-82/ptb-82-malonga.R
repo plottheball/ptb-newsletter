@@ -205,4 +205,3 @@ tbl_formatted <- display_tbl %>%
                                    weight = "bold"),
                          cell_fill(color = highlight_asvel)))
 tbl_formatted
-
